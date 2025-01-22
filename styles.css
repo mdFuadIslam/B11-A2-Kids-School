@@ -485,9 +485,9 @@ a {
         flex-direction: row;
         gap: 1em;
         margin: 1em 0;
-        align-items: center;
         justify-items: center;
-        justify-content: center;
+        justify-content: space-around;
+        align-items: flex-end;
     }
     .prev, .next {
         background-color: var(--primary-color);
