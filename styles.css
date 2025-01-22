@@ -3,6 +3,8 @@
     --secondary-color: #01ACFD;
     --primary-button-color: black;
     --primary-button-text-color: white;
+    --primary-date-color: #95B226;
+    --secondary-date-color: #5D58F0;
     --width: 16px;
 }
 
@@ -141,10 +143,17 @@ header nav ul {
 .story-content {
     display: grid;
     width: calc(100% - var(--width)*2);
+    grid-template-columns: 1fr; 
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.stories {
+    display: grid;
+    /* width: calc(100% - var(--width)*2); */
     grid-template-columns: 1fr 1fr; 
     column-gap: 1em;  
     row-gap: 1em;
-    margin-bottom: 1em;
     font-size: 9.13px;
     font-weight: bold;
     line-height: 17.1px;
@@ -183,7 +192,7 @@ header nav ul {
     top: 11.5em;
     left: 1em;
     justify-content: center;
-    background-color: var(--primary-button-color);
+    background-color: var(--primary-date-color);
     color: var(--primary-button-text-color);
     border-radius: 15px;
     padding: 6px 24px;
@@ -192,6 +201,10 @@ header nav ul {
 
 .poster-story{
     display: none;
+}
+
+.secondary-poster-date-bg {
+    background-color: var(--secondary-date-color);
 }
 
 /* footer content */
@@ -490,7 +503,51 @@ a {
         font-size: 3em;
         font-weight: bold;
     }
-
+    .story-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .stories {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 1em;
+        row-gap: 1em;
+    }
+    .poster-story .story-headline {
+        font-size: 24px;
+    }
+    .poster-story .story-desc {
+        font-size: 16px;
+        font-weight: medium;
+        color: #666666;
+        padding: 0 10px;
+    }
+    .stories .story-headline {
+        font-size: 16px;
+    }
+    .copy {
+        display: none;
+    }
+    .story-date {
+        position: absolute;
+        top: 18em;
+        left: 3em;
+        justify-content: center;
+        background-color: var(--primary-date-color);
+        color: var(--primary-button-text-color);
+        border-radius: 15px;
+        padding: 6px 24px;
+        /* margin: 1em; */
+    }
+    .poster-date {
+        top: 21.5em;
+        left: 3em;
+        background-color: #3CD8E8;
+    }
+    .secondary-poster-date-bg {
+        background-color: var(--secondary-date-color);
+    }
     /* footer content */
     footer {
         grid-template-columns: 1fr 1fr 1fr;
