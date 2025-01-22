@@ -28,9 +28,10 @@ body {
 
 body main {
     padding-bottom: 2em;
-    background-image: url('assets/bg.png');
-    background-repeat: no-repeat;
-    background: linear-gradient(to top, #e6cea4 0%, #FFFFFF 45%);    
+    /* background: linear-gradient(to top, #e6cea4 0%, #FFFFFF 45%), url('assets/bg.png');
+    background-size: cover;  */
+    background: linear-gradient(transparent, #e6cea4), url("assets/bg.png") repeat-y top left, #fff;
+    background-size: auto;
 }
 
 /* header content */
@@ -103,6 +104,11 @@ header nav ul {
 }
 
 /* main content */
+section {
+    margin: 5em 0;
+    /* background-image: url('assets/bg.png'); */
+}
+
 .prev-and-next {
     display: none;
 }
