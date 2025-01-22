@@ -199,9 +199,9 @@ footer {
     background-color: var(--secondary-color);
     /* background-color: black; */
     color: white;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* flex-wrap: wrap; */
     /* gap: 1em; */
     text-align: left;
     align-items: left;
@@ -264,6 +264,7 @@ footer .section-title {
     font-weight: regular;
     line-height: auto;
     padding: 1rem;
+    max-width: 1fr;
 }
 
 .contact-table {
@@ -490,4 +491,12 @@ a {
         font-weight: bold;
     }
 
+    /* footer content */
+    footer {
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-between;
+        padding: 5em 10em;
+        justify-items: center;
+        justify-content: center;
+    }
 }
