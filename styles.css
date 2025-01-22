@@ -324,6 +324,10 @@ footer .section-title {
     font-weight: bold;
 }
 
+.italic {
+    font-style: italic;
+}
+
 .medium {
     font-weight: medium;
 }
