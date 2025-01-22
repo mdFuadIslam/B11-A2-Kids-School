@@ -87,6 +87,10 @@ header nav ul {
     font-weight: medium;
 }
 
+.desktop {
+    display: none;
+}
+
 /* main content */
 .prev-and-next {
     display: none;
@@ -274,8 +278,37 @@ footer .section-title {
     color: var(--primary-color);
 }
 
+.sky-blue {
+    color: skyblue;
+}
+
+.light-blue {
+    color: #05D4DF;
+}
+    
+.blue-purple {
+    color: #5D58EF;
+}
 .secondary-color {
     color: var(--secondary-color);
+}
+
+.primary-color-bg{
+    background-color: var(--primary-color);
+}
+
+.header-info-button {
+    border-radius: 5px;
+    border: 0px;
+    padding: 10px 60px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.medium {
+    font-weight: medium;
 }
 
 section {
@@ -334,13 +367,74 @@ a {
 }
 /* desktop-view */
 @media screen and (min-width: 992px) {
-    body {
-        background-color: lightblue;
-    }
     .prev-and-next {
         display: flex;
     }
     .poster-story {
         display: block;
+    }
+    .desktop {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .mobile {
+        display: none;
+    }
+    .desktop ul {
+        list-style-type: none;
+        justify-content: space-around;
+    }
+    header nav {
+        border: 0;
+    }
+    .nav-list{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .nav-list ul {
+        display: flex;
+        flex-direction: row;
+        padding: 0 0;
+        gap: 3em;
+    }
+    .header-info {
+        display: flex;
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 30px;
+        align-items: center;
+    }
+    .banner{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0;
+        justify-content: space-around;
+        justify-items: left;
+        align-items: left;
+        margin: 0 0;
+        padding: 0 var(--width);
+    }
+    .banner-content {
+        grid-column: 1;
+        justify-items: left;
+        justify-content: left;
+        align-items: left;
+        text-align: left;
+
+    }
+    .banner p{
+        justify-items: left;
+        justify-content: left;
+        align-items: left;
+        text-align: left;
+    }
+    .banner p .banner-headline {
+        line-height: 61px;
+    }
+    .banner-img {
+        grid-column: 2;
+        
+    }
+    .banner-img img {
+        /* margin-top: 20em; */
     }
 }
